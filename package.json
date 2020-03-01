@@ -1,0 +1,30 @@
+{
+    "name": "razbor-lang",
+    "publisher": "suharik",
+    "displayName": "Razbor Lang",
+    "description": "Razbor language support",
+    "version": "0.0.3",
+    "engines": {
+        "vscode": "^1.40.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "razbor",
+            "aliases": ["Razbor", "razbor"],
+            "extensions": [".mexpr"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "razbor",
+            "scopeName": "source.mexpr",
+            "path": "./syntaxes/razbor.tmLanguage.json"
+        }]
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/suhr/razbor-lang.git"
+    }
+}

@@ -1,0 +1,37 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Razbor",
+	"patterns": [
+		{ "include": "#builtin" },
+		{ "include": "#strings" },
+		{
+			"name": "comment.line.razbor",
+			"begin": "//",
+			"end": "\n"
+		}
+	],
+	"repository": {
+		"builtin": {
+			"patterns": [{
+				"name": "storage.type.razbor",
+				"match": "\\b(u1|u2|u4|u8|u1le|u2le|u4le|u8le|s1|s2|s4|s8|s1le|s2le|s4le|s8le)\\b"
+			}]
+		},
+		"strings": {
+			"patterns": [
+				{
+					"name": "string.quoted.double.razbor",
+					"begin": "\"",
+					"end": "\"",
+					"patterns": [
+						{
+							"name": "constant.character.escape.razbor",
+							"match": "\\\\."
+						}
+					]
+				}
+			]
+		}
+	},
+	"scopeName": "source.mexpr"
+}
